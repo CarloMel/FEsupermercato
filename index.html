@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> JAITA Supermercato</title>
+    <!--Link di Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <navbar>
-        <div id="hd-sx">
-            <p>Home</p>
-        </div>
-        <div id="hd-centro">
-            <header> JAITA 111 - Supermercato</header>
-        </div>
-        <div id="hd-dx">
-            <ul>
-                <li><a href="#">Categorie</a></li>
-                <li><a href="#">Offerte</a></li>
-                <li><a href="#">In Arrivo</a></li>
-                <li><a href="#">Area Amministrativa</a></li>
+    <nav class="navbar navbar-expand-lg container">
+        <!--
+            navbar: classe per i menù di navigazione
+            navbar-expand-lg: definisco il breakpoint ove voglio che il menù collassi in un button/dropdown
+            Non uso fixed-top: menù fissato in alto allo scorrimento della pagina
+        -->
+        <a class="navbar-brand" href="#"><img src="https://cdn.discordapp.com/attachments/1232639249917149266/1233343564164104255/logoSupermercato.png?ex=662cc034&is=662b6eb4&hm=e58e9de1780df9cbfd56bba7efc6432badda001378619af9d67b65b6fc820659&" alt="Supermercato JAITA 111" /></a>
+        <!-- navbar-brand individua il titolo o il logo del sito -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mia_nav">
+            <span class="navbar-toggler-icon"></span> <!-- pulsantino con le tre lineette in orizzontale -->
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="mia_nav">
+            <!--
+                collapse: si collega col data-bs-toggle del button
+                navbar-collapse: si collega al contesto della navbar
+                justify-content-end: posiziona il contenuto del div a destra
+            -->
+            <ul class="navbar-nav"> <!-- adatto un elenco HTML alla classe di Bootstrap opportuna per la navbar-->
+                <li class="navbar-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="navbar-item"><a class="nav-link" href="#">Categorie</a></li>
+                <li class="navbar-item"><a class="nav-link" href="#">Offerte</a></li>
+                <li class="navbar-item"><a class="nav-link" href="#">In Arrivo</a></li>
+                <li class="navbar-item"><a class="nav-link" href="#">Area Amministrativa</a></li>
+                <li class="navbar-item"><a class="nav-link" href="#">Lavora con noi</a></li>
             </ul>
         </div>
-    </navbar>
+    </nav>
     <article>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam quis aliquid iste, expedita ullam cupiditate illum, quae reiciendis distinctio vel hic tempore dolorem dolores aliquam ut odit quisquam commodi molestiae facilis minus soluta porro eaque excepturi. Sed commodi alias inventore numquam quas magnam? Possimus animi, repellat, aut molestias voluptate, cum porro veritatis facere libero sunt laborum at! Neque illum minima assumenda dolor consequatur dicta, molestias iusto animi porro ea fuga voluptates. Eius alias accusamus tempore quas, ratione quisquam quasi corrupti odit sit magni id quod itaque. Commodi consectetur reprehenderit magni beatae autem animi illo accusantium quaerat, voluptatum dolorum rerum ut et fugiat ad voluptate? Vel, delectus illum, voluptatibus vero ab totam quo ipsum consectetur nesciunt doloribus perferendis. Quia consequuntur tempora, odio et asperiores cumque possimus sit culpa commodi necessitatibus rem quam fugiat fuga, numquam nobis! Expedita, ipsum necessitatibus officiis itaque voluptatum nemo atque unde dolorem ab alias inventore in veniam eaque fuga eum, neque labore provident placeat non nisi laborum repellat architecto illum? Maiores recusandae repellendus ab minus nesciunt vero hic. Quaerat alias tempora maxime inventore reprehenderit reiciendis quia culpa eligendi. Tenetur, minima cupiditate eos soluta iure atque velit labore sunt quis consequatur, expedita iusto itaque inventore. Recusandae, suscipit.</p>
     </article>
