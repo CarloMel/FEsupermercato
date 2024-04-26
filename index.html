@@ -16,6 +16,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg container-fluid">
+       
         <!--
             navbar: classe per i menù di navigazione
             navbar-expand-lg: definisco il breakpoint ove voglio che il menù collassi in un button/dropdown
@@ -27,7 +28,15 @@
         <!-- navbar-brand individua il titolo o il logo del sito -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mia_nav">
             <span class="navbar-toggler-icon"></span> <!-- pulsantino con le tre lineette in orizzontale -->
+            
         </button>
+        <div class="collapse navbar-collapse" id="mia_nav">
+                    
+            <form class="d-flex ms-auto"> <!-- Aggiunto ms-auto -->
+                <input class="form-control me-2" type="search" placeholder="Cerca prodotto" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Cerca</button>
+            </form>
+        </div>
         <div class="collapse navbar-collapse justify-content-end" id="mia_nav">
             <!--
                 collapse: si collega col data-bs-toggle del button
