@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 .navbar-brand img {
     margin-left: 7rem; /* Regola il margine sinistro del logo */
 }
@@ -8,4 +10,13 @@
 
 .navbar{
     background-color: #AB141C;
+}
+
+
+body {
+    background-color: #dddd;
+}
+
+.prezzi {
+    font-weight: bold;
 }
