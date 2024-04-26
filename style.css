@@ -1,0 +1,11 @@
+.navbar-brand img {
+    margin-left: 7rem; /* Regola il margine sinistro del logo */
+}
+
+.navbar-nav {
+    margin-right: 7rem; /* Regola il margine destro dell'elenco dei menu */
+}
+
+.navbar{
+    background-color: #AB141C;
+}
