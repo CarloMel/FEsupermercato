@@ -16,52 +16,45 @@
 
 <body>
     <nav class="navbar navbar-expand-lg container-fluid">
-       
-        <!--
-            navbar: classe per i menù di navigazione
-            navbar-expand-lg: definisco il breakpoint ove voglio che il menù collassi in un button/dropdown
-            Non uso fixed-top: menù fissato in alto allo scorrimento della pagina
-        -->
+        <!-- navbar: classe per i menù di navigazione -->
+        <!-- navbar-expand-lg: definisco il breakpoint ove voglio che il menù collassi in un button/dropdown -->
+        <!-- Non uso fixed-top: menù fissato in alto allo scorrimento della pagina -->
         <a class="navbar-brand" href="#"><img
                 src="https://cdn.discordapp.com/attachments/1232639249917149266/1233344185096994816/logoSupermercato2.png?ex=662cc0c8&is=662b6f48&hm=e570ffdb44318cb88f4fa9c24b585a82398d72036d1ee9e77fe26263a963b336&"
                 alt="Supermercato JAITA 111" /></a>
         <!-- navbar-brand individua il titolo o il logo del sito -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mia_nav">
             <span class="navbar-toggler-icon"></span> <!-- pulsantino con le tre lineette in orizzontale -->
-            
         </button>
         <div class="collapse navbar-collapse" id="mia_nav">
-                    
             <form class="d-flex ms-auto"> <!-- Aggiunto ms-auto -->
                 <input class="form-control me-2" type="search" placeholder="Cerca prodotto" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Cerca</button>
             </form>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="mia_nav">
-            <!--
-                collapse: si collega col data-bs-toggle del button
-                navbar-collapse: si collega al contesto della navbar
-                justify-content-end: posiziona il contenuto del div a destra
-            -->
+            <!-- collapse: si collega col data-bs-toggle del button -->
+            <!-- navbar-collapse: si collega al contesto della navbar -->
+            <!-- justify-content-end: posiziona il contenuto del div a destra -->
             <ul class="navbar-nav"> <!-- adatto un elenco HTML alla classe di Bootstrap opportuna per la navbar-->
                 <li class="navbar-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="navbar-item"><a class="nav-link" href="#">Categorie</a></li>
                 <li class="navbar-item"><a class="nav-link" href="#">Offerte</a></li>
                 <li class="navbar-item"><a class="nav-link" href="#">In Arrivo</a></li>
                 <li class="navbar-item"><a class="nav-link" href="#">Area Amministrativa</a></li>
-
             </ul>
         </div>
     </nav>
 
+    <!-- Banner con immagine -->
+    <section class="banner">
+        <img src="https://t4.ftcdn.net/jpg/04/19/13/15/360_F_419131523_QbMkKL8hTHMxB15VlufQbETEf59OtzjA.jpg" alt="Banner Image">
+    </section>
 
     <footer class="footer">
         <div class="container overflow-hidden">
             <div class="row gy-3 gy-md-5 gy-xl-0 align-items-sm-center">
-                <div class="col-xs-12 col-sm-6 col-xl-3 order-0 order-xl-0">
-    
-                </div>
-    
+                <div class="col-xs-12 col-sm-6 col-xl-3 order-0 order-xl-0"></div>
                 <div class="col-xs-12 col-xl-6 order-2 order-xl-1">
                     <ul class="nav justify-content-center">
                         <li class="nav-item">
@@ -83,12 +76,7 @@
                 </div>
             </div>
         </div>
-        </div>
-
-
-
     </footer>
-    
 </body>
 
 </html>
