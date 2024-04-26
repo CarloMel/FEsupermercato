@@ -16,6 +16,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg container-fluid">
+
         <!--
             navbar: classe per i menù di navigazione
             navbar-expand-lg: definisco il breakpoint ove voglio che il menù collassi in un button/dropdown
@@ -24,6 +25,13 @@
         <a class="navbar-brand" href="#"><img
                 src="https://cdn.discordapp.com/attachments/1232639249917149266/1233344185096994816/logoSupermercato2.png?ex=662cc0c8&is=662b6f48&hm=e570ffdb44318cb88f4fa9c24b585a82398d72036d1ee9e77fe26263a963b336&"
                 alt="Supermercato JAITA 111" /></a>
+                <div class="collapse navbar-collapse" id="mia_nav">
+                    
+                    <form class="d-flex ms-auto"> <!-- Aggiunto ms-auto -->
+                        <input class="form-control me-2" type="search" placeholder="Cerca prodotto" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Cerca</button>
+                    </form>
+                </div>
         <!-- navbar-brand individua il titolo o il logo del sito -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mia_nav">
             <span class="navbar-toggler-icon"></span> <!-- pulsantino con le tre lineette in orizzontale -->
