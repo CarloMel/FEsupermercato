@@ -40,3 +40,22 @@ body {
     width: 100%;
     height: auto;
 }
+
+
+/*HOMEPAGE*/
+/* Testo sottolineato */
+.underlined-text {
+    position: relative;
+    display: inline-block; /* Assicura che l'elemento abbia solo la larghezza del suo contenuto */
+}
+
+.underlined-text::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Altezza della sottolineatura */
+    left: 0;
+    width: 25%; /* Larghezza uguale alla larghezza del testo */
+    height: 4px; /* Spessore della sottolineatura */
+    background-color: rgb(227, 227, 38); /* Colore della sottolineatura */
+    transition: all 0.3s ease; /* Transizione per un effetto animato */
+}
