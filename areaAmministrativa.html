@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,23 +16,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80vh; /* Modifica l'altezza per occupare la maggior parte della pagina */
+            height: 80vh;
+            /* Modifica l'altezza per occupare la maggior parte della pagina */
         }
 
         .offerte-container {
-            width: 80%; /* Larghezza del contenitore delle offerte */
+            width: 80%;
+            /* Larghezza del contenitore delle offerte */
         }
 
         .square {
             border: 2px solid #000;
             background-color: #8f0000;
             padding: 20px;
-            margin-top: 20px; /* Aggiunta del margine superiore */
-            width: 100%; /* Larghezza del quadrato */
+            margin-top: 20px;
+            /* Aggiunta del margine superiore */
+            width: 100%;
+            /* Larghezza del quadrato */
         }
 
         .square h3 {
-            color: white ;
+            color: white;
             text-align: center;
         }
 
@@ -40,19 +45,47 @@
             background-color: #8f0000;
             color: white;
             padding: 20px;
-            width: 100%; /* Larghezza del quadrato per le informazioni dell'account */
-            margin-bottom: 20px; /* Aggiunta del margine inferiore */
+            width: 100%;
+            /* Larghezza del quadrato per le informazioni dell'account */
+            margin-bottom: 20px;
+            /* Aggiunta del margine inferiore */
+        }
+
+        .footer {
+            background-color: #8f0000;
+            color: white;
+            padding: 20px 0;
+            /* Aggiungi spazio sopra e sotto */
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .footer ul li:last-child {
+            margin-right: 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg container-fluid">
         <!-- navbar: classe per i menù di navigazione -->
         <!-- navbar-expand-lg: definisco il breakpoint ove voglio che il menù collassi in un button/dropdown -->
         <!-- Non uso fixed-top: menù fissato in alto allo scorrimento della pagina -->
-        <a class="navbar-brand" href="index.html"><img
-                src="jaitasupermercati.png"
-                alt="Supermercato JAITA 111" /></a>
+        <a class="navbar-brand" href="index.html"><img src="jaitasupermercati.png" alt="Supermercato JAITA 111" /></a>
         <!-- navbar-brand individua il titolo o il logo del sito -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mia_nav">
             <span class="navbar-toggler-icon"></span> <!-- pulsantino con le tre lineette in orizzontale -->
@@ -84,7 +117,8 @@
         <div class="offerte-container">
             <div class="square account-info">
                 <h3>Informazioni Account</h3>
-                <p>Benvenuto</p><p>NOME COGNOME</p>
+                <p>Benvenuto</p>
+                <p>NOME COGNOME</p>
                 <!-- Aggiungi altre informazioni dell'account qui -->
             </div>
             <div class="square">
@@ -115,7 +149,5 @@
         </div>
     </div>
 </body>
+
 </html>
-
-
-
