@@ -26,11 +26,6 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mia_nav">
             <span class="navbar-toggler-icon"></span> <!-- pulsantino con le tre lineette in orizzontale -->
         </button>
-        <div class="collapse navbar-collapse" id="mia_nav">
-            <form class="d-flex ms-auto"> <!-- Aggiunto ms-auto -->
-                <input class="form-control me-2" type="search" placeholder="Cerca prodotto" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Cerca</button>
-            </form>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="mia_nav">
             <!-- collapse: si collega col data-bs-toggle del button -->
@@ -39,7 +34,6 @@
             <ul class="navbar-nav"> <!-- adatto un elenco HTML alla classe di Bootstrap opportuna per la navbar-->
                 <li class="navbar-item"><a class="nav-link" href="index.html">Home</a></li>
                 <!-- Non è una pagina HTML! -->
-                <li class="navbar-item"><a class="nav-link" href="#">Categorie</a></li>
                 <li class="navbar-item"><a class="nav-link" href="offerte.html">Offerte</a></li>
                 <li class="navbar-item"><a class="nav-link" href="inArrivo.html">In Arrivo</a></li>
                 <li class="navbar-item"><a class="nav-link" href="areaAmministrativa.html">Area Amministrativa</a></li>
@@ -85,7 +79,16 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit qui totam voluptate natus minima alias consequuntur. Nobis maxime accusantium enim quibusdam, rem iste quis ipsam facilis id molestiae at maiores molestias ad sunt facere aut, nulla quas omnis perspiciatis similique, animi quasi magni odit mollitia? Consequatur, earum. Laudantium, temporibus nostrum.
+                <p>
+                   <h4>Napoli</h4>
+                    Via Armando Diaz, 7<br>
+                    <h4>Milano</h4>
+                    Via Aldo Moro, 93<br>
+                    <h4>Torino</h4>
+                    Traversa Garibaldi, 64<br>
+                    <h4>Roma</h4>
+                    Via Alighieri, 11
+                </p>
             </div>
             <div class="col-md-6">
                 <div class="embed-responsive embed-responsive-16by9" style="height: 50vh;">
@@ -114,17 +117,13 @@
         <div class="col-md-3 text-center">
             <img src="Images/IconaOfferte.png" alt="Home" class="img-fluid custom-img mb-3">
             <h4>Prodotti in offerta</h4>
-            <a href="#" class="btn btn-dark">Vai ai prodotti in offerta</a>
+            <a href="offerte.html" class="btn btn-dark">Vai ai prodotti in offerta</a>
         </div>
-        <div class="col-md-3 text-center">
-            <img src="Images/IconaProdotti.png" alt="Carrello" class="img-fluid custom-img mb-3">
-            <h4>I nostri punti vendita</h4>
-            <a href="#" class="btn btn-dark">Scopri i punti vendita</a>
-        </div>
+
         <div class="col-md-3 text-center">
             <img src="Images/IconaSalesPoint.png"Contattaci" class="img-fluid custom-img mb-3">
             <h4>Offerte in arrivo</h4>
-            <a href="#" class="btn btn-dark">Scopri le prossime offerte</a>
+            <a href="inArrivo.html" class="btn btn-dark">Scopri le prossime offerte</a>
         </div>
     </div>
 </div>
@@ -142,13 +141,10 @@
                 <div class="col-xs-12 col-xl-6 order-2 order-xl-1">
                     <ul class="nav justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link link-secondary px-2 px-md-3" href="#!">Da inventare</a>
+                            <a class="nav-link link-secondary px-2 px-md-3" href="#!">Numero Assistenza: 0818993839</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-secondary px-2 px-md-3" href="#!">Da inventare</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link-secondary px-2 px-md-3" href="#!">Da inventare</a>
+                            <a class="nav-link link-secondary px-2 px-md-3" href="#!">Partita IVA: P.IVA123456789</a>
                         </li>
                     </ul>
                 </div>
