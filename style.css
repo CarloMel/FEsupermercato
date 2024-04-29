@@ -16,6 +16,7 @@
 
 body {
     color: white;
+    background-color: #FFFAF4 !important;
 }
 
 .grassetto {
@@ -84,7 +85,7 @@ body {
     left: 0;
     width: 25%; /* Larghezza uguale alla larghezza del testo */
     height: 4px; /* Spessore della sottolineatura */
-    background-color: rgb(227, 227, 38); /* Colore della sottolineatura */
+    background-color: #FFD200; /* Colore della sottolineatura */
     transition: all 0.3s ease; /* Transizione per un effetto animato */
 }
 
@@ -102,7 +103,7 @@ body {
     left: 0;
     width: 15%; /* Larghezza uguale alla larghezza del testo */
     height: 4px; /* Spessore della sottolineatura */
-    background-color: rgb(227, 227, 38); /* Colore della sottolineatura */
+    background-color: #FFD200; /* Colore della sottolineatura */
     transition: all 0.3s ease; /* Transizione per un effetto animato */
 }
 
