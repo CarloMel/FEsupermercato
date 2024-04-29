@@ -119,3 +119,9 @@ body {
     height: auto; /* Imposta l'altezza automaticamente per mantenere le proporzioni */
 }
 
+
+.dropdown .dropdown-toggle {
+    background-color: white !important;
+    color: black;
+    margin-right: 10px;
+}
