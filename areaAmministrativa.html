@@ -78,6 +78,28 @@
             text-decoration: none;
         }
     </style>
+    
+    <script>
+        function updateButtonText(buttonId, selectedText) {
+            document.getElementById(buttonId).innerText = selectedText;
+        }
+
+        function addOffer() {
+            var product = document.getElementById("dropdownMenuButton1").innerText;
+            var offer = document.getElementById("dropdownMenuButton2").innerText;
+            var when = document.getElementById("dropdownMenuButton3").innerText;
+            var offerText = product + " - " + offer;
+
+            if (when === "Offerte attive") {
+                var activeOffersDiv = document.getElementById("activeOffers");
+                activeOffersDiv.innerHTML += "<p>" + offerText + "</p>";
+            } else if (when === "Offerte in arrivo") {
+                var upcomingOffersDiv = document.getElementById("upcomingOffers");
+                upcomingOffersDiv.innerHTML += "<p>" + offerText + "</p>";
+            }
+        }
+    </script>
+    
 </head>
 
 <body>
@@ -90,12 +112,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mia_nav">
             <span class="navbar-toggler-icon"></span> <!-- pulsantino con le tre lineette in orizzontale -->
         </button>
-        <div class="collapse navbar-collapse" id="mia_nav">
-            <form class="d-flex ms-auto"> <!-- Aggiunto ms-auto -->
-                <input class="form-control me-2" type="search" placeholder="Cerca prodotto" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Cerca</button>
-            </form>
-        </div>
+
         <div class="collapse navbar-collapse justify-content-end" id="mia_nav">
             <!-- collapse: si collega col data-bs-toggle del button -->
             <!-- navbar-collapse: si collega al contesto della navbar -->
@@ -124,24 +141,59 @@
                 <h3>Organizza le offerte</h3>
                 <div class="row">
                     <div class="col">
-                        <h4>Offerte in corso:</h4>
-                        <ul>
-                            <li>Esempio1</li>
-                            <li>Esempio2</li>
-                            <li>Esempio3</li>
-                            <li>Esempio4</li>
-                            <li>Esempio5</li>
-                        </ul>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Seleziona prodotto
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton1', 'Prodotto 1')">Prodotto 1</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton1', 'Prodotto 2')">Prodotto 2</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton1', 'Prodotto 3')">Prodotto 3</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col">
-                        <h4>Offerte in arrivo:</h4>
-                        <ul>
-                            <li>Prova1</li>
-                            <li>Prova2</li>
-                            <li>Prova3</li>
-                            <li>Prova4</li>
-                            <li>Prova5</li>
-                        </ul>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Seleziona offerta
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton2', '5%')">5%</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton2', '10%')">10%</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton2', '15%')">15%</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton2', '20%')">20%</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton2', '50%')">50%</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dove?
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton3', 'Offerte attive')">Offerte attive</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton3', 'Offerte in arrivo')">Offerte in arrivo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-primary" onclick="addOffer()">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div class="square">
+                <div class="row">
+                    <div class="col-6">
+                        <h3>OFFERTE ATTIVE</h3>
+                        <div id="activeOffers"></div>
+                    </div>
+                    <div class="col-6">
+                        <h3>OFFERTE IN ARRIVO</h3>
+                        <div id="upcomingOffers"></div>
                     </div>
                 </div>
             </div>
