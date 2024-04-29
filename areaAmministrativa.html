@@ -15,18 +15,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 615px;
+            height: 80vh; /* Modifica l'altezza per occupare la maggior parte della pagina */
+        }
+
+        .offerte-container {
+            width: 80%; /* Larghezza del contenitore delle offerte */
         }
 
         .square {
             border: 2px solid #000;
             background-color: #8f0000;
             padding: 20px;
+            margin-top: 20px; /* Aggiunta del margine superiore */
+            width: 100%; /* Larghezza del quadrato */
         }
 
         .square h3 {
             color: white ;
             text-align: center;
+        }
+
+        .account-info {
+            border: 2px solid #000;
+            background-color: #8f0000;
+            color: white;
+            padding: 20px;
+            width: 100%; /* Larghezza del quadrato per le informazioni dell'account */
+            margin-bottom: 20px; /* Aggiunta del margine inferiore */
         }
     </style>
 </head>
@@ -66,51 +81,41 @@
     </nav>
 
     <div class="container">
-        <div class="square">
-            <div class="row">
-                <div class="col">
-                    <h3>Offerte in corso:</h3>
-                    <!-- Aggiungi qui il contenuto per le offerte in corso -->
-                </div>
-                <div class="col vertical-line"></div>
-                <div class="col">
-                    <h3>Offerte in arrivo:</h3>
-                    <!-- Aggiungi qui il contenuto per le offerte in arrivo -->
-                </div>
-                <div class="col">
-                    <ul>
-                        <li>Esempio1</li>
-                        <li>Esempio2</li>
-                        <li>Esempio3</li>
-                        <li>Esempio4</li>
-                        <li>Esempio5</li>
-                        <li>Esempio6</li>
-                        <li>Esempio7</li>
-                        <li>Esempio8</li>
-                        <li>Esempio9</li>
-                        <li>Esempio10</li>
-                    </ul>
-                </div>
+        <div class="offerte-container">
+            <div class="square account-info">
+                <h3>Informazioni Account</h3>
+                <p>Benvenuto</p><p>NOME COGNOME</p>
+                <!-- Aggiungi altre informazioni dell'account qui -->
             </div>
-            <hr>
-            <div class="row">
-                <div class="col">
-                    <ul>
-                        <li>Prova1</li>
-                        <li>Prova2</li>
-                        <li>Prova3</li>
-                        <li>Prova4</li>
-                        <li>Prova5</li>
-                        <li>Prova6</li>
-                        <li>Prova7</li>
-                        <li>Prova8</li>
-                        <li>Prova9</li>
-                        <li>Prova10</li>
-                    </ul>
+            <div class="square">
+                <h3>Organizza le offerte</h3>
+                <div class="row">
+                    <div class="col">
+                        <h4>Offerte in corso:</h4>
+                        <ul>
+                            <li>Esempio1</li>
+                            <li>Esempio2</li>
+                            <li>Esempio3</li>
+                            <li>Esempio4</li>
+                            <li>Esempio5</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Offerte in arrivo:</h4>
+                        <ul>
+                            <li>Prova1</li>
+                            <li>Prova2</li>
+                            <li>Prova3</li>
+                            <li>Prova4</li>
+                            <li>Prova5</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+
+
 
