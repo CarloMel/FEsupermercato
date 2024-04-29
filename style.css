@@ -43,7 +43,32 @@ body {
     border-color: white;
 }
 
+.footer .nav-link {
+    color: white !important;
+}
 
+/* Navbar */
+.navbar {
+    background-color: #8f0000;
+    color: white;
+    padding: 20px;
+    height: 80px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+/* Pulsante di ricerca */
+.navbar .btn-outline-success {
+    color: black;
+    border-color: white;
+    background-color: white;
+}
 
 /*HOMEPAGE*/
 /* Testo sottolineato */
