@@ -1,7 +1,7 @@
-
-
 .navbar-brand img {
     margin-left: 7rem; /* Regola il margine sinistro del logo */
+    width: 160px;
+    height: 160px ;
 }
 
 .navbar-nav {
@@ -9,15 +9,13 @@
 }
 
 .navbar{
-    background-color: #B9F18C;
-    color: white;
+    background-color: #8f0000;
     padding: 20px;
     height: 80px;
 }
 
-
 body {
-    background-color: #dddd;
+    color: white;
 }
 
 .grassetto {
@@ -25,8 +23,7 @@ body {
 }
 
 .footer {
-    background-color: #B9F18C;
-    color: white;
+    background-color: #8f0000;
     padding: 20px;
     height: 80px;
 }
@@ -40,3 +37,12 @@ body {
     width: 100%;
     height: auto;
 }
+
+.btn-outline-success {
+    color: white;
+    border-color: white;
+}
+
+
+
+
