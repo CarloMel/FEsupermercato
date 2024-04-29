@@ -89,3 +89,32 @@ body {
 }
 
 
+/* testo sottolineato sezione chi siamo */
+.underlined-text2 {
+    position: relative;
+    display: inline-block; /* Assicura che l'elemento abbia solo la larghezza del suo contenuto */
+}
+
+.underlined-text2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Altezza della sottolineatura */
+    left: 0;
+    width: 15%; /* Larghezza uguale alla larghezza del testo */
+    height: 4px; /* Spessore della sottolineatura */
+    background-color: rgb(227, 227, 38); /* Colore della sottolineatura */
+    transition: all 0.3s ease; /* Transizione per un effetto animato */
+}
+
+
+.background-cta{
+    background-color: aquamarine;
+}
+
+/* icone */
+
+.custom-img {
+    max-width: 15vh !important; /* Imposta la larghezza massima delle immagini */
+    height: auto; /* Imposta l'altezza automaticamente per mantenere le proporzioni */
+}
+
