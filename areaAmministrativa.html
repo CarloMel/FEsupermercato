@@ -81,6 +81,20 @@
     </style>
     
     <script>
+        $(document).ready(function () {
+            // Inizializza i datepicker per la data di inizio e di fine
+            $('#startDate').datepicker({
+                format: 'dd/mm/yyyy',
+                autoclose: true,
+                todayHighlight: true
+            });
+            $('#endDate').datepicker({
+                format: 'dd/mm/yyyy',
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+
         function updateButtonText(buttonId, selectedText) {
             document.getElementById(buttonId).innerText = selectedText;
         }
@@ -88,14 +102,18 @@
         function addOffer() {
             var product = document.getElementById("dropdownMenuButton1").innerText;
             var offer = document.getElementById("dropdownMenuButton2").innerText;
-            var when = document.getElementById("dropdownMenuButton3").innerText;
+            var startDate = document.getElementById("startDate").value;
+            var endDate = document.getElementById("endDate").value;
             var offerText = product + " - " + offer;
 
             var offerObj = {
                 product: product,
-                offer: offer
+                offer: offer,
+                startDate: startDate,
+                endDate: endDate
             };
 
+            var when = (new Date(startDate) > new Date()) ? "Offerte in arrivo" : "Offerte attive";
             var offers = JSON.parse(localStorage.getItem(when)) || [];
             offers.push(offerObj);
             localStorage.setItem(when, JSON.stringify(offers));
@@ -105,7 +123,7 @@
 
         function removeOffer(offerText, when) {
             var offers = JSON.parse(localStorage.getItem(when)) || [];
-            offers = offers.filter(function(offer) {
+            offers = offers.filter(function (offer) {
                 return offer.product + " - " + offer.offer !== offerText;
             });
             localStorage.setItem(when, JSON.stringify(offers));
@@ -125,17 +143,21 @@
             upcomingOffersDiv.innerHTML = "<h3>OFFERTE IN ARRIVO</h3>";
 
             activeOffers.forEach(function (offer) {
-                activeOffersDiv.innerHTML += "<p>" + offer.product + " - " + offer.offer + " <button class='btn btn-danger btn-sm' onclick='removeOffer(\"" + offer.product + " - " + offer.offer + "\", \"Offerte attive\")'>X</button></p>";
+                activeOffersDiv.innerHTML += "<p>" + offer.product + " - " + offer.offer + " (Dal: " + offer.startDate +
+                    " al: " + offer.endDate + ") <button class='btn btn-danger btn-sm' onclick='removeOffer(\"" +
+                    offer.product + " - " + offer.offer + "\", \"Offerte attive\")'>X</button></p>";
             });
 
             upcomingOffers.forEach(function (offer) {
-                upcomingOffersDiv.innerHTML += "<p>" + offer.product + " - " + offer.offer + " <button class='btn btn-danger btn-sm' onclick='removeOffer(\"" + offer.product + " - " + offer.offer + "\", \"Offerte in arrivo\")'>X</button></p>";
+                upcomingOffersDiv.innerHTML += "<p>" + offer.product + " - " + offer.offer + " (Dal: " + offer.startDate +
+                    " al: " + offer.endDate + ") <button class='btn btn-danger btn-sm' onclick='removeOffer(\"" +
+                    offer.product + " - " + offer.offer + "\", \"Offerte in arrivo\")'>X</button></p>";
             });
         }
 
         window.onload = displayOffers;
     </script>
-    
+
 </head>
 
 <body>
@@ -153,12 +175,14 @@
             <!-- collapse: si collega col data-bs-toggle del button -->
             <!-- navbar-collapse: si collega al contesto della navbar -->
             <!-- justify-content-end: posiziona il contenuto del div a destra -->
-            <ul class="navbar-nav"> <!-- adatto un elenco HTML alla classe di Bootstrap opportuna per la navbar-->
+            <ul class="navbar-nav">
+                <!-- adatto un elenco HTML alla classe di Bootstrap opportuna per la navbar-->
                 <li class="navbar-item"><a class="nav-link" href="index.html">Home</a></li>
                 <!-- Non è una pagina HTML! -->
                 <li class="navbar-item"><a class="nav-link" href="offerte.html">Offerte</a></li>
                 <li class="navbar-item"><a class="nav-link" href="inArrivo.html">In Arrivo</a></li>
-                <li class="navbar-item"><a class="nav-link" href="areaAmministrativa.html">Area Amministrativa</a></li>
+                <li class="navbar-item"><a class="nav-link" href="areaAmministrativa.html">Area Amministrativa</a>
+                </li>
                 <li class="navbar-item"><a class="nav-link" href="login.html">Login</a></li>
 
             </ul>
@@ -205,16 +229,12 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dove?
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton3', 'Offerte attive')">Offerte attive</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('dropdownMenuButton3', 'Offerte in arrivo')">Offerte in arrivo</a></li>
-                            </ul>
-                        </div>
+                        <!-- Aggiungi input per la data di inizio e di fine delle offerte -->
+                        <input type="date" class="form-control" id="startDate" placeholder="Data inizio">
+                    </div>
+                    <div class="col">
+                        <!-- Aggiungi input per la data di fine delle offerte -->
+                        <input type="date" class="form-control" id="endDate" placeholder="Data fine">
                     </div>
                     <div class="col">
                         <button class="btn btn-primary" onclick="addOffer()">OK</button>
