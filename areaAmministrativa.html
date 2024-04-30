@@ -187,7 +187,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid" >
         <div class="offerte-container">
             <div class="square account-info">
                 <h3>Informazioni Account</h3>
@@ -248,31 +248,31 @@
                         <div id="upcomingOffers"></div>
                     </div>
                 </div>
+                <div class="square offerte-container text-center" style="margin-left: auto; margin-right: auto;">
+                    <h3>Gestione Prodotti</h3>
+                    <!-- Form per aggiunta, modifica e rimozione dei prodotti -->
+                    <form action="#" method="post" id="productForm">
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Nome Prodotto</label>
+                            <input type="text" class="form-control" id="productName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productPrice" class="form-label">Prezzo Prodotto</label>
+                            <input type="number" class="form-control" id="productPrice" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productDescription" class="form-label">Descrizione Prodotto</label>
+                            <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">Immagine Prodotto</label>
+                            <input type="file" class="form-control" id="productImage">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="addProduct()">Aggiungi Prodotto</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="square offerte-container">
-        <h3>Gestione Prodotti</h3>
-        <!-- Form per aggiunta, modifica e rimozione dei prodotti -->
-        <form action="#" method="post" id="productForm">
-            <div class="mb-3">
-                <label for="productName" class="form-label">Nome Prodotto</label>
-                <input type="text" class="form-control" id="productName" required>
-            </div>
-            <div class="mb-3">
-                <label for="productPrice" class="form-label">Prezzo Prodotto</label>
-                <input type="number" class="form-control" id="productPrice" required>
-            </div>
-            <div class="mb-3">
-                <label for="productDescription" class="form-label">Descrizione Prodotto</label>
-                <textarea class="form-control" id="productDescription" rows="3" required></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="productImage" class="form-label">Immagine Prodotto</label>
-                <input type="file" class="form-control" id="productImage">
-            </div>
-            <button type="button" class="btn btn-primary" onclick="addProduct()">Aggiungi Prodotto</button>
-        </form>
     </div>
     
     <script>
