@@ -32,8 +32,6 @@
             padding: 20px;
             margin-top: 20px;
             /* Aggiunta del margine superiore */
-            width: 100%;
-            /* Larghezza del quadrato */
         }
 
         .square h3 {
@@ -253,6 +251,46 @@
             </div>
         </div>
     </div>
+    <div class="square offerte-container">
+        <h3>Gestione Prodotti</h3>
+        <!-- Form per aggiunta, modifica e rimozione dei prodotti -->
+        <form action="#" method="post" id="productForm">
+            <div class="mb-3">
+                <label for="productName" class="form-label">Nome Prodotto</label>
+                <input type="text" class="form-control" id="productName" required>
+            </div>
+            <div class="mb-3">
+                <label for="productPrice" class="form-label">Prezzo Prodotto</label>
+                <input type="number" class="form-control" id="productPrice" required>
+            </div>
+            <div class="mb-3">
+                <label for="productDescription" class="form-label">Descrizione Prodotto</label>
+                <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="productImage" class="form-label">Immagine Prodotto</label>
+                <input type="file" class="form-control" id="productImage">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="addProduct()">Aggiungi Prodotto</button>
+        </form>
+    </div>
+    
+    <script>
+        function addProduct() {
+    var productName = document.getElementById("productName").value;
+    var productPrice = document.getElementById("productPrice").value;
+    var productDescription = document.getElementById("productDescription").value;
+    var productImage = document.getElementById("productImage").value; // Qui puoi gestire il caricamento dell'immagine, se necessario
+
+
+    // Dopo l'aggiunta del prodotto, potresti voler pulire i campi del modulo per l'aggiunta successiva
+    document.getElementById("productName").value = "";
+    document.getElementById("productPrice").value = "";
+    document.getElementById("productDescription").value = "";
+    document.getElementById("productImage").value = "";
+}
+
+    </script>
 </body>
 
 </html>
